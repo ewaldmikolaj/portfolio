@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -83,21 +82,18 @@ body::-webkit-scrollbar {
 }
 
 .skill {
+    position: relative;
     &__text {
         width: 100%;
     }
     &__popup {
         position: absolute;
-        display: flex;
-        justify-content: flex-end;
         flex-wrap: wrap;
         box-sizing: border-box;
         padding: 10px;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 95%;
-        height: 65%;
+        z-index: 100;
+        width: 200px;
+        height: 200px;
         background-color: white;
         color: black;
         border-radius: 5px;
@@ -106,6 +102,19 @@ body::-webkit-scrollbar {
             visibility: visible;
         }
     }
+    &__arrow {
+        position: absolute;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+    }
+}
+
+.fa-3x {
+    transition: 0.2s;
 }
 
 .scroller-wrap {

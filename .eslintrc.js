@@ -1,17 +1,24 @@
+/* eslint-disable */
 module.exports = {
   root: true,
   env: {
+    browser: true,
     node: true
   },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/standard'
-  ],
   parserOptions: {
     parser: 'babel-eslint'
   },
+  extends: [
+    'plugin:vue/recommended'
+  ],
+  plugins: [
+  ],
+  // add your custom rules here
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    eqeqeq: 'off',
+    semi: 'off',
+    'prefer-const': 'off',
+    'brace-style': 0,
+    'vue/no-v-html': 0
   }
 }

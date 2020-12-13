@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <transition name="scroller" mode="out-in">
-      <router-view/>
+    <transition
+      name="scroller"
+      mode="out-in"
+    >
+      <router-view />
     </transition>
   </div>
 </template>
