@@ -14,11 +14,11 @@
     <div
       class="skill__popup"
       :class="{ 'skill__popup-active': isActive }"
-      :style="`top:${objectY + 15}px; ${site}: 0`"
+      :style="isCenter ? `top: ${objectY + 15}px; ${site}: 50%; transform: translateX(-50%); ` : `top: ${objectY + 15}px; ${site}: 0; `"
     >
       <div
         class="skill__arrow"
-        :style="`${site}: 10px;`"
+        :style="isCenter ? `${site}: 50%; transform: translateX(-50%);` : `${site}: 10px;`"
       />
       <font-awesome-icon
         class="skill_cross"
@@ -50,6 +50,10 @@ export default {
     color: {
       type: String,
       default: ''
+    },
+    isCenter: {
+      type: Boolean,
+      default: false
     }
   },
   data () {

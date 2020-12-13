@@ -13,6 +13,7 @@
         :color="icon.color"
         :text="icon.text"
         :icon-s="icon.iconS"
+        :is-center="icon.center"
       />
     </div>
     <div class="skills-page__wrapper">
@@ -53,16 +54,16 @@ export default {
   data () {
     return {
       low: [
-        { text: 'lorem cos cos dupa bajo jajo cos jldkjfs;dlfkj df;lksdjf;lskdjfsd;l ds;lfkjd;flkj', iconS: 'vuejs', color: 'green', state: null },
-        { text: 'lorem', iconS: 'git', color: '#f34f29'},
-        { text: 'lorem', iconS: 'php', color: '#777bb3'}
+        { text: 'lorem cos cos dupa bajo jajo cos jldkjfs;dlfkj df;lksdjf;lskdjfsd;l ds;lfkjd;flkj', iconS: 'vuejs', color: 'green', state: null, center: false },
+        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'git', color: '#f34f29', center: true },
+        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'php', color: '#777bb3', center: false}
       ],
       medium: [
-        { text: 'lorem', iconS: 'sass', color: '#cd6799' },
+        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'sass', color: '#cd6799' },
         { text: 'lorem', iconS: 'js-square', color: '#f7df1e' }
       ],
       high: [
-        { text: 'lorem', iconS: 'html5', color: '#e44d26' },
+        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'html5', color: '#e44d26' },
         { text: 'lorem', iconS: 'css3-alt', color: '#1572b7' }
       ]
     }

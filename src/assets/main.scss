@@ -93,6 +93,7 @@ body::-webkit-scrollbar {
         background-color: white;
         color: black;
         border-radius: 5px;
+        width: 60vw;
         z-index: 100;
         visibility: hidden;
         &-active {
@@ -100,8 +101,6 @@ body::-webkit-scrollbar {
             animation-name: popup;
             animation-duration: .2s;
             animation-fill-mode: both;
-            max-width: 200px;
-            max-height: 200px;
         }
     }
     &__arrow {
@@ -117,8 +116,8 @@ body::-webkit-scrollbar {
 
 @keyframes popup {
     0% {max-width: 0px; max-height: 0px;}
-    50% {max-width: 200px; max-height: 100px;}
-    100% {max-width: 200px; max-height: 200px;}
+    50% {max-width: 60vw; max-height: 100px;}
+    100% {max-width: 60vw; max-height: 200px;}
 }
 
 .fa-3x {
