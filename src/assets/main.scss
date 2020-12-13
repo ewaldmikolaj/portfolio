@@ -88,29 +88,37 @@ body::-webkit-scrollbar {
     }
     &__popup {
         position: absolute;
-        flex-wrap: wrap;
         box-sizing: border-box;
         padding: 10px;
-        z-index: 100;
-        width: 200px;
-        height: 200px;
         background-color: white;
         color: black;
         border-radius: 5px;
+        z-index: 100;
         visibility: hidden;
         &-active {
             visibility: visible;
+            animation-name: popup;
+            animation-duration: .2s;
+            animation-fill-mode: both;
+            max-width: 200px;
+            max-height: 200px;
         }
     }
     &__arrow {
         position: absolute;
-        top: -10px;
+        top: -9px;
         width: 0;
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-bottom: 10px solid white;
     }
+}
+
+@keyframes popup {
+    0% {max-width: 0px; max-height: 0px;}
+    50% {max-width: 200px; max-height: 100px;}
+    100% {max-width: 200px; max-height: 200px;}
 }
 
 .fa-3x {

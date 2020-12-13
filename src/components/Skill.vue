@@ -14,9 +14,12 @@
     <div
       class="skill__popup"
       :class="{ 'skill__popup-active': isActive }"
-      :style="`top:${objectY + 10}px`"
+      :style="`top:${objectY + 15}px; ${site}: 0`"
     >
-      <div class="skill__arrow" />
+      <div
+        class="skill__arrow"
+        :style="`${site}: 10px;`"
+      />
       <font-awesome-icon
         class="skill_cross"
         :icon="[ 'fas', 'times' ]"
@@ -52,7 +55,8 @@ export default {
       isActive: false,
       colorA: null,
       objectX: null,
-      objectY: null
+      objectY: null,
+      site: ''
     }
   },
   methods: {
@@ -61,9 +65,17 @@ export default {
       this.objectX = (object.x + object.width) / 2
       this.objectY = object.height
       this.isActive = true
+      if (object.x < window.innerWidth / 2) {
+        this.site = 'left' 
+      } else {
+        this.site = 'right'
+      }
+      console.log(object)
+      this.$emit('changeActive', this.isActive)
     },
     hide () {
       this.isActive = false
+      this.$emit('changeActive', this.isActive)
     }
   }
 }

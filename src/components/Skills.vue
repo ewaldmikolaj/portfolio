@@ -13,6 +13,7 @@
         :color="icon.color"
         :text="icon.text"
         :icon-s="icon.iconS"
+        @changeActive="turnOff"
       />
     </div>
     <div class="skills-page__wrapper">
@@ -53,18 +54,23 @@ export default {
   data () {
     return {
       low: [
-        { text: 'lorem', iconS: 'vuejs', color: 'green'},
+        { text: 'lorem cos cos dupa bajo jajo cos jldkjfs;dlfkj df;lksdjf;lskdjfsd;l ds;lfkjd;flkj', iconS: 'vuejs', color: 'green', state: null },
         { text: 'lorem', iconS: 'git', color: '#f34f29'},
         { text: 'lorem', iconS: 'php', color: '#777bb3'}
       ],
       medium: [
-        { text: 'lorem', iconS: 'sass', color: '#cd6799'},
-        { text: 'lorem', iconS: 'js-square', color: '#f7df1e'}
+        { text: 'lorem', iconS: 'sass', color: '#cd6799' },
+        { text: 'lorem', iconS: 'js-square', color: '#f7df1e' }
       ],
       high: [
-        { text: 'lorem', iconS: 'html5', color: '#e44d26'},
-        { text: 'lorem', iconS: 'css3-alt', color: '#1572b7'}
+        { text: 'lorem', iconS: 'html5', color: '#e44d26' },
+        { text: 'lorem', iconS: 'css3-alt', color: '#1572b7' }
       ]
+    }
+  },
+  methods: {
+    turnOff (e) {
+      console.log(e.value)
     }
   }
 }
