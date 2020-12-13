@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import { EventBus } from './../EventBus'
+
 export default {
   name: 'Skill',
   props: {
@@ -59,6 +61,12 @@ export default {
       site: ''
     }
   },
+  created () {
+    EventBus.$on('turn-on', this.turnOff)
+  },
+  beforeDestroy () {
+    EventBus.$off('turn-on')
+  },
   methods: {
     show (e) {
       let object = e.target.getBoundingClientRect()
@@ -70,12 +78,17 @@ export default {
       } else {
         this.site = 'right'
       }
+      console.log(e.target.getBBox())
       console.log(object)
-      this.$emit('changeActive', this.isActive)
+      EventBus.$emit('turn-on', this.iconS)
     },
     hide () {
       this.isActive = false
-      this.$emit('changeActive', this.isActive)
+    },
+    turnOff (icon) {
+      if (this.iconS != icon) {
+        this.hide()
+      }
     }
   }
 }

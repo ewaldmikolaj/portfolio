@@ -13,7 +13,6 @@
         :color="icon.color"
         :text="icon.text"
         :icon-s="icon.iconS"
-        @changeActive="turnOff"
       />
     </div>
     <div class="skills-page__wrapper">
@@ -44,7 +43,7 @@
 </template>
 
 <script>
-import Skill from './Skill'
+import Skill from './Skill.vue'
 
 export default {
   name: 'SKills',
@@ -66,11 +65,6 @@ export default {
         { text: 'lorem', iconS: 'html5', color: '#e44d26' },
         { text: 'lorem', iconS: 'css3-alt', color: '#1572b7' }
       ]
-    }
-  },
-  methods: {
-    turnOff (e) {
-      console.log(e.value)
     }
   }
 }
