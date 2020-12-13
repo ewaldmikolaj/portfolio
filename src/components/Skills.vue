@@ -4,7 +4,10 @@
       <h2 class="skills-page__header">Umiejętności</h2>
       <div class="skills-page__wrapper">
         <h4 class="skills-page__level">Poziom podstawowy</h4>
-        <font-awesome-icon :icon="[ 'fab', 'vuejs' ]" size="3x"/>
+        <!-- <font-awesome-icon :icon="[ 'fab', 'vuejs' ]" size="3x"/> -->
+        <Skill text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, at consectetur, doloremque ex facilis dolor deleniti incidunt repellendus aliquid necessitatibus voluptatibus laborum magnam magni vel. Deleniti commodi eos excepturi ea? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, at consectetur, doloremque ex facilis dolor deleniti incidunt repellendus aliquid necessitatibus voluptatibus laborum magnam magni vel. Deleniti commodi eos excepturi ea?"
+        iconS="vuejs"
+        />
         <font-awesome-icon :icon="[ 'fab', 'git' ]" size="3x"/>
         <font-awesome-icon :icon="[ 'fab', 'php' ]" size="3x"/>
       </div>
@@ -23,7 +26,12 @@
 </template>
 
 <script>
+import Skill from './Skill'
+
 export default {
-  name: 'SKills'
+  name: 'SKills',
+  components: {
+    Skill
+  }
 }
 </script>
