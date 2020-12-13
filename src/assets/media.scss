@@ -2,8 +2,32 @@
     .about-page__image {
         margin: 70px;
     }
-    .skills-page__wrapper {
-        width: 70%;
+    .skills-page {
+        &__wrapper {
+            width: 80%;
+        }
+        &__level {
+            font-size: 1.5rem;
+        }
+    }
+    .skill {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+        &__popup {
+            position: relative;
+            visibility: visible;
+            animation: unset;
+        }
+        &__arrow {
+            display: none;
+        }
+    }
+    .fa-2x {
+        display: none;
     }
 }
 
@@ -24,14 +48,10 @@
         width: 80%;
         margin-bottom: 15px;
         box-shadow: 4px 4px 8px 0px rgba(50, 50, 50, 0.41);
-        border-radius: 5px;
         margin: 0;
     }
     &__text {
         grid-column-start: 2;
     }
-    }
-    .skills-page__wrapper {
-        width: 30%;
     }
 }

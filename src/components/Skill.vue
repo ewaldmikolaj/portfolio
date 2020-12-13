@@ -14,11 +14,11 @@
     <div
       class="skill__popup"
       :class="{ 'skill__popup-active': isActive }"
-      :style="isCenter ? `top: ${objectY + 15}px; ${site}: 50%; transform: translateX(-50%); ` : `top: ${objectY + 15}px; ${site}: 0; `"
+      :style="isMobile ? isCenter ? `top: ${objectY + 15}px; ${site}: 50%; transform: translateX(-50%); ` : `top: ${objectY + 15}px; ${site}: 0; ` : ''"
     >
       <div
         class="skill__arrow"
-        :style="isCenter ? `${site}: 50%; transform: translateX(-50%);` : `${site}: 10px;`"
+        :style="isMobile ? isCenter ? `${site}: 50%; transform: translateX(-50%);` : `${site}: 10px;`: ''"
       />
       <font-awesome-icon
         class="skill_cross"
@@ -62,8 +62,13 @@ export default {
       colorA: null,
       objectX: null,
       objectY: null,
-      site: ''
+      site: '',
+      isMobile: null
     }
+  },
+  mounted () {
+    this.checkView()
+    window.addEventListener('resize', this.checkView)
   },
   created () {
     EventBus.$on('turn-on', this.turnOff)
@@ -92,6 +97,13 @@ export default {
     turnOff (icon) {
       if (this.iconS != icon) {
         this.hide()
+      }
+    },
+    checkView () {
+      if (window.innerWidth < 768) {
+        this.isMobile = true
+      } else {
+        this.isMobile = false
       }
     }
   }
