@@ -15,6 +15,8 @@
       class="skill__popup"
       :class="{ 'skill__popup-active': isActive }"
       :style="isMobile ? isCenter ? `top: ${objectY + 15}px; ${site}: 50%; transform: translateX(-50%); ` : `top: ${objectY + 15}px; ${site}: 0; ` : ''"
+      @mouseenter="!isMobile ? colorA=color : ''"
+      @mouseleave="!isMobile ? colorA='white' : ''"
     >
       <div
         class="skill__arrow"
@@ -100,7 +102,7 @@ export default {
       }
     },
     checkView () {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 768 || window.innerHeight < 768) {
         this.isMobile = true
       } else {
         this.isMobile = false
