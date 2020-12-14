@@ -59,8 +59,10 @@ export default {
       if (Math.abs(delta) > 10) {
         if (delta > 0 && keys[this.active + 1]) {
           this.$router.push(`/${keys[this.active + 1]}`)
+          this.scroller = 'scrollerD'
         } else if (delta < 0 && keys[this.active - 1]) {
           this.$router.push(`/${keys[this.active - 1]}`)
+          this.scroller = 'scrollerU'
         }
       }
     }
