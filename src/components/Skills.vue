@@ -1,5 +1,6 @@
 <template>
   <div class="skills-page scroller-wrap">
+    <Navbar />
     <h2 class="skills-page__header">
       Umiejętności
     </h2>
@@ -45,11 +46,13 @@
 
 <script>
 import Skill from './Skill.vue'
+import Navbar from './Navbar.vue'
 
 export default {
   name: 'SKills',
   components: {
-    Skill
+    Skill,
+    Navbar
   },
   data () {
     return {

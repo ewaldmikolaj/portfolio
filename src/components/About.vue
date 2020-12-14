@@ -1,5 +1,6 @@
 <template>
   <div class="about-page scroller-wrap">
+    <Navbar />
     <h2 class="about-page__header">
       O mnie
     </h2>
@@ -15,7 +16,12 @@
 </template>
 
 <script>
+import Navbar from './Navbar.vue'
+
 export default {
-  name: 'About'
+  name: 'About',
+  components: {
+    Navbar
+  }
 }
 </script>

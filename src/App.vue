@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <transition
-      name="scroller"
+      :name="scroller"
       mode="out-in"
     >
       <router-view />
@@ -9,7 +9,6 @@
   </div>
 </template>
 <script>
-
 export default {
   name: 'App',
   data () {
@@ -21,7 +20,8 @@ export default {
       },
       active: null,
       touchA: null,
-      touchB: null
+      touchB: null,
+      scroller: 'scrollerD'
     }
   },
   watch: {
@@ -47,8 +47,10 @@ export default {
       const keys = Object.keys(this.sites)
       if (event.wheelDelta < 0 && keys[this.active + 1]) {
         this.$router.push(`/${keys[this.active + 1]}`)
+        this.scroller = 'scrollerD'
       } else if (event.wheelDelta > 0 && keys[this.active - 1]) {
         this.$router.push(`/${keys[this.active - 1]}`)
+        this.scroller = 'scrollerU'
       }
     },
     scrollphone () {

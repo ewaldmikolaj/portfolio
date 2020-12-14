@@ -18,6 +18,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
+    position: relative;
 }
 
 @mixin default-flex-column {
@@ -119,6 +120,20 @@ body::-webkit-scrollbar {
     }
 }
 
+.navbar {
+    position: absolute;
+    @include default-flex-column;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &__dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+}
+
 @keyframes popup {
     0% {max-width: 0px; max-height: 0px;}
     50% {max-width: 60vw; max-height: 100px;}
@@ -137,14 +152,33 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-.scroller-enter-active,
-.scroller-leave-to {
-  will-change: opacity, transform;
-  transition: opacity 0.4s, transform 0.5s;
+// .scroller-enter-active,
+// .scroller-leave-to {
+//   will-change: opacity, transform;
+//   transition: opacity 0.3s, transform 0.4s;
+// }
+
+// .scroller-enter,
+// .scoller-leave-to {
+//   transform: translateY(100%);
+//   opacity: 0;
+// }
+
+.scrollerD-enter {
+  transform: translateY(100%);
 }
 
-.scroller-enter,
-.scoller-leave-to {
-  transform: translateY(100%);
-  opacity: 0;
+.scrollerU-enter {
+    transform: translateY(-100%);
+}
+
+.scrollerD-enter-to,
+.scrollerU-enter-to {
+    transform: translateY(0%);
+}
+
+.scrollerD-enter-active,
+.scrollerU-enter-active {
+    will-change: transform;
+    transition: transform 0.4s;
 }

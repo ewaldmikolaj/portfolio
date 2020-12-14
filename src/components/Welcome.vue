@@ -1,5 +1,6 @@
 <template>
   <div class="welcome-page scroller-wrap">
+    <Navbar />
     <h1 class="welcome-page__header">
       Mikołaj Ewald
     </h1>
@@ -7,7 +8,12 @@
 </template>
 
 <script>
+import Navbar from './Navbar.vue'
+
 export default {
-  name: 'Welcome'
+  name: 'Welcome',
+  components: {
+    Navbar
+  }
 }
 </script>
