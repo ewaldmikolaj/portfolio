@@ -6,6 +6,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    overscroll-behavior: contain;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
