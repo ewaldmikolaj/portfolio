@@ -1,5 +1,5 @@
 <template>
-  <div class="welcome-page scroller-wrap">
+  <div class="welcome-page ">
     <Navbar />
     <h1 class="welcome-page__header">
       Mikołaj Ewald

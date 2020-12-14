@@ -6,8 +6,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+$color1: black;
+$color2: white;
+
 body {
     overscroll-behavior: contain;
+    font-size: 10px;
 }
 
 body::-webkit-scrollbar {
@@ -17,38 +21,43 @@ body::-webkit-scrollbar {
 @mixin default-site {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     box-sizing: border-box;
     position: relative;
+    padding: 15px;
 }
 
 @mixin default-flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
 }
 
 .welcome-page {
     @include default-site;
     @include default-flex-column;
-    background-color: black;
-    color: white;
+    background-color: $color1;
+    color: $color2;
     justify-content: center;
+    &__header {
+        font-size: 1.9rem;
+    }
 }
 
 .about-page {
     @include default-site;
     @include default-flex-column;
-    background-color: white;
+    background-color: $color2;
     &__header {
-        margin-bottom: 5px;
+        margin-bottom: 25px;
         width: 100%;
         text-align: center;
+        font-size: 1.7rem;
     }
     &__image {
         width: 50%;
         max-width: 300px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         box-shadow: 4px 4px 8px 0px rgba(50, 50, 50, 0.41);
         border-radius: 5px;
     }
@@ -61,13 +70,14 @@ body::-webkit-scrollbar {
 .skills-page {
     @include default-site;
     @include default-flex-column;
-    background-color: black;
+    background-color: $color1;
     position: relative;
     justify-content: center;
-    color: white;
+    color: $color2;
     &__header {
         position: absolute;
         top: 15px;
+        font-size: 1.7rem;
     }
     &__wrapper {
         display: flex;
@@ -80,7 +90,8 @@ body::-webkit-scrollbar {
     &__level {
         width: 100%;
         margin-bottom: 10px;
-        font-size: 1.1rem;
+        font-size: .9rem;
+        text-align: center;
     }
     &__icon {
         width: 30px;
@@ -91,13 +102,14 @@ body::-webkit-scrollbar {
     position: relative;
     &__text {
         width: 100%;
+        font-size: 1rem;
     }
     &__popup {
         position: absolute;
         box-sizing: border-box;
         padding: 10px;
-        background-color: white;
-        color: black;
+        background-color: $color2;
+        color: $color1;
         border-radius: 5px;
         width: 60vw;
         z-index: 100;
@@ -116,7 +128,7 @@ body::-webkit-scrollbar {
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid white;
+        border-bottom: 10px solid $color2;
     }
 }
 
@@ -142,27 +154,8 @@ body::-webkit-scrollbar {
 
 .fa-3x {
     transition: 0.2s;
+    font-size: 3rem;
 }
-
-.scroller-wrap {
-    min-height: 100vh;
-    max-height: 100vh;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
-
-// .scroller-enter-active,
-// .scroller-leave-to {
-//   will-change: opacity, transform;
-//   transition: opacity 0.3s, transform 0.4s;
-// }
-
-// .scroller-enter,
-// .scoller-leave-to {
-//   transform: translateY(100%);
-//   opacity: 0;
-// }
 
 .scrollerD-enter {
   transform: translateY(100%);

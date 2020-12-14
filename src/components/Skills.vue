@@ -1,5 +1,5 @@
 <template>
-  <div class="skills-page scroller-wrap">
+  <div class="skills-page ">
     <Navbar />
     <h2 class="skills-page__header">
       Umiejętności

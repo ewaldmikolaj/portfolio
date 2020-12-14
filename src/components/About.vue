@@ -1,5 +1,5 @@
 <template>
-  <div class="about-page scroller-wrap">
+  <div class="about-page ">
     <Navbar />
     <h2 class="about-page__header">
       O mnie
