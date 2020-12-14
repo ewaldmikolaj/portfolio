@@ -9,6 +9,8 @@
   </div>
 </template>
 <script>
+import { EventBus } from './EventBus.js'
+
 export default {
   name: 'App',
   data () {
@@ -27,7 +29,18 @@ export default {
   watch: {
     $route () {
       this.active = this.sites[this.$route.name]
+    },
+    scroller () {
+      console.log('dupa')
     }
+  },
+  created () {
+    EventBus.$on('scroller-state', (value) => {
+      this.scroller = value
+    })
+  },
+  beforeDestroy () {
+    EventBus.$off('scoller-state')
   },
   mounted () {
     this.active = this.sites[this.$route.name]

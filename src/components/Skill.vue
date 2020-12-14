@@ -89,8 +89,6 @@ export default {
       } else {
         this.site = 'right'
       }
-      console.log(e.target.getBBox())
-      console.log(object)
       EventBus.$emit('turn-on', this.iconS)
     },
     hide () {
