@@ -10,7 +10,7 @@
       alt=""
     >
     <p class="about-page__text">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptas fugiat delectus, quasi perferendis ipsum molestias asperiores praesentium nam, dicta voluptatibus tempora, minima eveniet consectetur itaque deserunt alias omnis earum quis, recusandae in ea perferendis commodi Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatem architecto in magnam animi. Assumenda, architecto, praesentium
+      Cześć! Jestem rozwijającym się web developerem. W wolnych chwilach czytam książki oraz ćwiczę. Ukończyłem technikum informatyczne, a aktualnie jestem studentem Uniwersytetu im. Adama Mickiewicza. Bardzo lubię programować i poszerzać swój zakres wiedzy. Aktualnie skupiam się na szerszym poznaniu Vue.js, a wolnych chwilach uczę się C++. Bardzo się cieszę, że zawitałeś na moją stronę : )
     </p>
   </div>
 </template>
