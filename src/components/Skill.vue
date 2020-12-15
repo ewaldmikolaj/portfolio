@@ -22,12 +22,12 @@
         class="skill__arrow"
         :style="isMobile ? isCenter ? `${site}: 50%; transform: translateX(-50%);` : `${site}: 10px;`: ''"
       />
-      <font-awesome-icon
-        class="skill_cross"
-        :icon="[ 'fas', 'times' ]"
-        size="2x"
+      <p
+        class="skill__cross"
         @click="hide"
-      />
+      >
+        x
+      </p>
       <p class="skill__text">
         {{ text }}
       </p>

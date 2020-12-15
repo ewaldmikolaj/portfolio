@@ -89,7 +89,7 @@ body::-webkit-scrollbar {
     }
     &__level {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         font-size: .9rem;
         text-align: center;
     }
@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
     &__popup {
         position: absolute;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 5px;
         background-color: $color2;
         color: $color1;
         border-radius: 5px;
@@ -130,19 +130,25 @@ body::-webkit-scrollbar {
         border-right: 10px solid transparent;
         border-bottom: 10px solid $color2;
     }
+    &__cross {
+        font-size: 1.1rem;
+        margin-right: 10px;
+        text-align: right;
+        font-weight: bold;
+    }
 }
 
 .navbar {
     position: absolute;
     @include default-flex-column;
-    right: 0;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     &__dot {
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 }
 
@@ -154,7 +160,7 @@ body::-webkit-scrollbar {
 
 .fa-3x {
     transition: 0.2s;
-    font-size: 3rem;
+    font-size: 2.7rem;
 }
 
 .scrollerD-enter {

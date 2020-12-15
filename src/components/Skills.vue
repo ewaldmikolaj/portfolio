@@ -57,17 +57,17 @@ export default {
   data () {
     return {
       low: [
-        { text: 'lorem cos cos dupa bajo jajo cos jldkjfs;dlfkj df;lksdjf;lskdjfsd;l ds;lfkjd;flkj', iconS: 'vuejs', color: 'green', state: null, center: false },
-        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'git', color: '#f34f29', center: true },
-        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'php', color: '#777bb3', center: false}
+        { text: 'Vue.js to front-endowy framework JavaScript typu open source do tworzenia interfejsów użytkownika i aplikacji.', iconS: 'vuejs', color: 'green', state: null, center: false },
+        { text: 'Git to oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym.', iconS: 'git', color: '#f34f29', center: true },
+        { text: 'PHP to interpretowany, skryptowy język programowania zaprojektowany do generowania stron internetowych.', iconS: 'php', color: '#777bb3', center: false}
       ],
       medium: [
-        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'sass', color: '#cd6799' },
-        { text: 'lorem', iconS: 'js-square', color: '#f7df1e' }
+        { text: 'Sass to preprocesorowy język skryptowy, który jest interpretowany lub kompilowany do kaskadowych arkuszy stylów (CSS).', iconS: 'sass', color: '#cd6799' },
+        { text: 'JavaScript to język programowania wysokiego poziomu. ', iconS: 'js-square', color: '#f7df1e' }
       ],
       high: [
-        { text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit itaque minus distinctio asperiores fugit recusandae vitae quo! Numquam atque reiciendis magnam assumenda similique cumque tenetur hic, dolorum ab expedita?', iconS: 'html5', color: '#e44d26' },
-        { text: 'lorem', iconS: 'css3-alt', color: '#1572b7' }
+        { text: 'HTML to język znaczników do tworzenia dokumentów hipertekstowych.', iconS: 'html5', color: '#e44d26' },
+        { text: 'CSS to język służący do opisu formy prezentacji stron WWW.', iconS: 'css3-alt', color: '#1572b7' }
       ]
     }
   }

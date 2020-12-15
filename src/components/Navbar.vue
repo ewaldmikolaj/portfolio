@@ -5,7 +5,7 @@
       :key="index"
       :to="view.path"
       :name="view.id"
-      :style="view.isActive ? 'background-color: red;' : 'background-color: grey;'"
+      :style="view.isActive ? 'background-color: #505050;' : 'background-color: #A0A0A0;'"
       class="navbar__dot"
       @click.native="setScrollDirection"
     />
