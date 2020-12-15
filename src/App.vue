@@ -18,7 +18,8 @@ export default {
       sites: {
         welcome: 0,
         about: 1,
-        skills: 2
+        skills: 2,
+        contact: 3
       },
       active: null,
       touchA: null,
@@ -29,9 +30,6 @@ export default {
   watch: {
     $route () {
       this.active = this.sites[this.$route.name]
-    },
-    scroller () {
-      console.log('dupa')
     }
   },
   created () {
