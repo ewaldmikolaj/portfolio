@@ -66,12 +66,9 @@
     .contact-page__textarea {
         margin-bottom: 5px;
     }
-    .about-page__text {
-        font-size: 10px;
-    }
 }
 
-@media only screen and (orientation: landscape) {
+@media (orientation: landscape) {
     .about-page {
         display: flex;
         flex-direction: row;
@@ -79,6 +76,9 @@
         padding-right: 100px;
         &__image {
             margin-right: 40px;
+        }
+        &__text {
+            font-size: 2vw;
         }
     }
 }
