@@ -35,6 +35,14 @@
     .fa-3x {
         align-self: center;
     }
+    .contact-page__input,
+    .contact-page__textarea,
+    .contact-page__submit {
+        font-size: 1.3rem;
+    }
+    .contact-page__social-icon {
+        font-size: 2.2rem;
+    }
 }
 
 @media only screen and (min-width : 1025px) {
@@ -44,7 +52,6 @@
     align-items: center;
     padding-right: 100px;
     &__image {
-        width: 80%;
         margin-right: 40px;
     }
     }

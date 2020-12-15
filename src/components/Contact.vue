@@ -8,18 +8,30 @@
       class="contact-page__form"
       action=""
     >
+      <label
+        class="contact-page__form-header"
+        for="email"
+      >Email: </label>
       <input
         v-model="form.email"
         class="contact-page__input"
         type="text"
         name="email"
       >
+      <label
+        class="contact-page__form-header"
+        for="title"
+      >Tytuł: </label>
       <input
         v-model="form.title"
         class="contact-page__input"
         type="text"
         name="title"
       >
+      <label
+        class="contact-page__form-header"
+        for="content"
+      >Treść: </label>
       <textarea
         v-model="form.content"
         name="content"
@@ -31,6 +43,20 @@
         value="Wyślij"
       >
     </form>
+    <div class="contact-page__social">
+      <a
+        href=""
+        class="contact-page__social-icon"
+      >
+        <font-awesome-icon :icon="['fab', 'linkedin' ]" />
+      </a>
+      <a
+        href=""
+        class="contact-page__social-icon"
+      >
+        <font-awesome-icon :icon="['fab', 'github-square' ]" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -45,9 +71,9 @@ export default {
   data () {
     return {
       form: {
-        email: 'Podaj email',
-        title: 'podaj tytuł',
-        content: 'Dupa'
+        email: '',
+        title: '',
+        content: ''
       }
     }
   }
