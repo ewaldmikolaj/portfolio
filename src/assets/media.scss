@@ -47,19 +47,38 @@
 }
 
 @media only screen and (min-width : 1025px) {
-    .about-page {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-right: 100px;
-    &__image {
-        margin-right: 40px;
-    }
-    }
     .skill__popup {
         width: 47vw;
     }
     .skill__text {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-height: 360px) and (orientation: landscape) {
+    .skills-page__level {
+        margin-bottom: 5px;
+    }
+    .fa-3x {
+        font-size: 1.6rem;
+    }
+    .contact-page__input,
+    .contact-page__textarea {
+        margin-bottom: 5px;
+    }
+    .about-page__text {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .about-page {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 100px;
+        &__image {
+            margin-right: 40px;
+        }
     }
 }
